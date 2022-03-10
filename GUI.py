@@ -57,7 +57,7 @@ def deleteData():
         with conn.cursor() as cur:
             cur.execute(sql)
             conn.commit()
-            print(cur.rowcount, "rows deleted")
+            messagebox.showinfo('성공', '%d개 데이터 삭제 성공' % cur.rowcount)
 
 root = Tk()
 root.geometry("600x300")
